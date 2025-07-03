@@ -1,0 +1,55 @@
+@import "tailwindcss";
+/* App.css */
+
+/* Smooth transition for all background and color changes */
+* {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Remove default margin and padding */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Custom scrollbar for better appearance */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Optional: Add a hover effect for todo items */
+.todo-item {
+  cursor: pointer;
+}
+
+.todo-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Optional: Completed todo strike-through styling */
+.todo-completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+/* Smooth fade-in for todos */
+.todo-enter {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.todo-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s, transform 0.3s;
+}
