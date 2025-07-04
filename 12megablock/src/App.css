@@ -1,0 +1,72 @@
+/* Root container styling */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  font-family: 'Inter', system-ui, sans-serif;
+  background: linear-gradient(135deg, #f9fafb, #eef1f5);
+  min-height: 100vh;
+}
+
+/* Logo styling */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  transition: transform 300ms ease, filter 300ms ease;
+  will-change: transform, filter;
+  cursor: pointer;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 1.25em rgba(100, 108, 255, 0.4));
+  transform: scale(1.08);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 1.25em rgba(97, 218, 250, 0.4));
+}
+
+/* Logo spin animation */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Animate only when user prefers motion */
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Card styling */
+.card {
+  padding: 2rem;
+  border-radius: 1rem;
+  background: #ffffff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  transition: transform 250ms ease, box-shadow 250ms ease;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Muted text styling */
+.read-the-docs {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* Optional: smooth fade-in for all elements */
+body * {
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
